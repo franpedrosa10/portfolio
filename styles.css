@@ -7,6 +7,10 @@
   --card-bg: rgba(255, 255, 255, 0.05);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .logo a {
   color: inherit;
   text-decoration: none;
@@ -34,7 +38,7 @@ body.dark {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 1rem;
+  padding: 1rem 1.5rem;
   background-color: var(--bg-light);
   position: fixed;
   width: 100%;
@@ -72,9 +76,31 @@ a {
   transition: background 0.2s;
 }
 
-.nav-links a:hover {
-  background-color: rgba(0, 0, 0, 0.1);
+.nav-links a {
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
 }
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #00C9FF, #92FE9D); /* celeste a verde lima */
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+  border-radius: 2px;
+}
+
+.nav-links a:hover::after {
+  transform: scaleX(1);
+}
+
 
 .lang-btn,
 .theme-toggle {
@@ -110,6 +136,11 @@ a {
 
 body.dark #skills li {
   color: var(--text-dark); /* modo oscuro */
+}
+
+body.dark #skills img[src*="express"],
+body.dark #skills img[src*="node"] {
+  filter: invert(1);
 }
 
 body.dark #projects .project-card {
@@ -226,7 +257,7 @@ body.dark h2 {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  padding: 3rem 2rem;
+  padding: 0rem 2rem;
   background-color: inherit;
 }
 
@@ -290,8 +321,8 @@ body.dark h2 {
 
 section {
   max-width: 900px;
-  margin: 2rem auto 3rem;
-  padding: 1.5rem 2rem;
+  margin: 0rem auto 3rem;
+  padding: 0rem 2rem;
   text-align: center;
   font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: var(--text-light);
@@ -366,17 +397,13 @@ body.dark #about p {
   transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
-#skills ul li:hover {
-  transform: scale(1.05);
-  background-color: rgba(0, 123, 255, 0.1);
-  box-shadow: 0 8px 20px rgba(0, 123, 255, 0.35);
-}
 
 #skills img {
   width: 48px;
   height: 48px;
   margin-bottom: 0.6rem;
   transition: transform 0.2s ease;
+  object-fit: contain;
 }
 
 #skills img:hover {
@@ -473,6 +500,11 @@ body.dark .modal-content {
   background: var(--bg-dark);
   color: var(--text-dark);
 }
+
+.modal-video {
+  margin-top: 3rem; /* esto baja el iframe */
+}
+
 
 .modal-video iframe {
   width: 100%;
@@ -600,8 +632,10 @@ section {
 #skills h2 {
   position: relative;
   top: -60px;
-  padding-top: 60px;
+  /* padding-top: 60px; */
 }
+
+
 
 @media (max-width: 768px) {
   .navbar {
