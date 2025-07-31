@@ -18,12 +18,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Cambiar idioma
   const translate = (lang) => {
-    document.querySelectorAll('[data-es]').forEach(el => {
+  document.querySelectorAll('[data-es]').forEach(el => {
+    if (el.tagName === "IMG") {
+      // Si es imagen, cambia el src
+      el.src = el.dataset[lang];
+    } else {
+      // Si es texto, cambia el contenido
       el.textContent = el.dataset[lang];
-    });
-    btnEs?.classList.toggle('active', lang === 'es');
-    btnEn?.classList.toggle('active', lang === 'en');
-  };
+    }
+  });
+
+  btnEs?.classList.toggle('active', lang === 'es');
+  btnEn?.classList.toggle('active', lang === 'en');
+};
+
 
   btnEs?.addEventListener('click', () => translate('es'));
   btnEn?.addEventListener('click', () => translate('en'));

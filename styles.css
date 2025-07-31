@@ -126,6 +126,16 @@ a {
   color: inherit;
 }
 
+
+body.dark .nav-links {
+  background-color: var(--bg-dark);
+}
+
+body.dark .nav-links a {
+  color: var(--text-dark);
+}
+
+
 .bar {
   width: 25px;
   height: 3px;
@@ -427,20 +437,29 @@ body.dark #about p {
   border-radius: 8px;
   text-align: center;
   height: 100%;
-  /* position: relative; */
 }
 
 .project-card img {
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  height: 180px;         
+  object-fit: contain;  
+  background-color: #fff;   
   border-radius: 4px;
+  padding: 0.5rem;     
+  box-sizing: border-box;
 }
+
 
 .project-card h3 {
   margin-top: 0.75rem;
   margin-bottom: 0.5rem;
-  min-height: 3em;
+  min-height: 3.5rem;  
+  display: flex;
+  align-items: center;   
+  justify-content: center;
+  text-align: center;
 }
+
 
 .coming-soon {
   font-style: italic;
