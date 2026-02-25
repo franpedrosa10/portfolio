@@ -8,6 +8,8 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@500;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <title>Francisco Pedrosa | Portfolio</title>
+  <link rel="icon" type="image/jpeg" href="favicon.jpeg?v=3" />
+  <link rel="shortcut icon" type="image/jpeg" href="favicon.jpeg?v=3" />
   <meta name="description" content="Portfolio profesional de Francisco Pedrosa, desarrollador de software enfocado en soluciones web eficientes, modernas y centradas en resultados.">
   <link rel="stylesheet" href="styles.css" />
   <script defer src="script.js"></script>
@@ -48,12 +50,22 @@
     <section id="welcome" class="hero section reveal">
       <div class="hero-copy">
         <p class="eyebrow" data-es="DESARROLLADOR FULL STACK" data-en="FULL STACK DEVELOPER">DESARROLLADOR FULL STACK</p>
-        <h1 data-es="Construyo productos digitales claros, robustos y listos para escalar." data-en="I build clear, robust digital products ready to scale.">
-          Construyo productos digitales claros, robustos y listos para escalar.
+        <h1 data-es="Frontend con Angular orientado a producto, respaldado por backend solido." data-en="Product-driven Angular frontend, backed by solid backend architecture.">
+          Frontend con Angular orientado a producto, respaldado por backend solido.
         </h1>
-        <p class="hero-lead" data-es="Soy Francisco Pedrosa, desarrollador Full Stack con foco en Frontend con Angular. Construyo aplicaciones web modernas, mantenibles y orientadas a resultados de negocio." data-en="I'm Francisco Pedrosa, a Full Stack developer focused on Frontend with Angular. I build modern, maintainable web applications aligned with business outcomes.">
-          Soy Francisco Pedrosa, desarrollador Full Stack con foco en Frontend con Angular. Construyo aplicaciones web modernas, mantenibles y orientadas a resultados de negocio.
+        <p class="hero-lead" data-es="Soy Francisco Pedrosa, desarrollador Full Stack con foco en Frontend Angular. Construyo interfaces claras, performantes y escalables, integradas con APIs robustas y listas para produccion." data-en="I'm Francisco Pedrosa, a Full Stack developer focused on Angular Frontend. I build clear, performant, and scalable interfaces integrated with robust APIs and ready for production.">
+          Soy Francisco Pedrosa, desarrollador Full Stack con foco en Frontend Angular. Construyo interfaces claras, performantes y escalables, integradas con APIs robustas y listas para produccion.
         </p>
+
+        <div class="hero-profile">
+          <img src="foto.jpeg" alt="Foto de Francisco Pedrosa" class="hero-avatar" />
+          <div class="hero-profile-copy">
+            <p class="hero-profile-name">Francisco Pedrosa</p>
+            <p class="hero-profile-status" data-es="Disponible para oportunidades Full Stack / Frontend Angular" data-en="Available for Full Stack / Angular Frontend opportunities">
+              Disponible para oportunidades Full Stack / Frontend Angular
+            </p>
+          </div>
+        </div>
 
         <div class="hero-cta">
           <a class="btn btn-primary" href="#projects" data-es="Ver proyectos" data-en="View projects">Ver proyectos</a>
@@ -62,27 +74,82 @@
 
         <ul class="hero-highlights" aria-label="Highlights">
           <li>
-            <span class="highlight-value">18+</span>
-            <span class="highlight-label" data-es="Tecnologias" data-en="Technologies">Tecnologias</span>
+            <span class="highlight-value">Angular</span>
+            <span class="highlight-label" data-es="Foco principal" data-en="Primary focus">Foco principal</span>
           </li>
           <li>
             <span class="highlight-value" data-es="Proyectos reales" data-en="Real-world projects">Proyectos reales</span>
-            <span class="highlight-label" data-es="Web + automatizaciones" data-en="Web + automation">Web + automatizaciones</span>
+            <span class="highlight-label" data-es="En produccion" data-en="In production">En produccion</span>
           </li>
           <li>
-            <span class="highlight-value" data-es="100%" data-en="100%">100%</span>
-            <span class="highlight-label" data-es="Compromiso" data-en="Commitment">Compromiso</span>
+            <span class="highlight-value" data-es="Node + SQL" data-en="Node + SQL">Node + SQL</span>
+            <span class="highlight-label" data-es="Stack completo" data-en="Complete stack">Stack completo</span>
           </li>
         </ul>
       </div>
 
       <div class="hero-media">
-        <div class="profile-wrap">
-          <img src="foto.jpeg" alt="Foto de Francisco Pedrosa" class="profile-pic" />
-          <div class="status-pill">
-            <span class="status-dot" aria-hidden="true"></span>
-            <span data-es="Disponible para nuevos desafios" data-en="Available for new opportunities">Disponible para nuevos desafios</span>
+        <div class="retro-monitor" aria-label="Demo interactiva de perfil profesional">
+          <div class="monitor-shell">
+            <div class="monitor-topbar">
+              <div class="monitor-dots" aria-hidden="true">
+                <span class="monitor-dot dot-red"></span>
+                <span class="monitor-dot dot-amber"></span>
+                <span class="monitor-dot dot-green"></span>
+              </div>
+              <p class="monitor-title" data-es="franpedrosa.dev // terminal interactiva" data-en="franpedrosa.dev // interactive terminal">franpedrosa.dev // terminal interactiva</p>
+            </div>
+
+            <div class="monitor-screen">
+              <div class="crt-overlay" aria-hidden="true"></div>
+
+              <div id="boot-sequence" class="boot-sequence" aria-live="polite">
+                <p class="boot-line" data-es="Inicializando terminal de portfolio..." data-en="Initializing portfolio terminal...">Inicializando terminal de portfolio...</p>
+                <p class="boot-line" data-es="Cargando stack: Angular, Node, SQL..." data-en="Loading stack: Angular, Node, SQL...">Cargando stack: Angular, Node, SQL...</p>
+                <p class="boot-line" data-es="Cargando comandos interactivos..." data-en="Loading interactive commands...">Cargando comandos interactivos...</p>
+                <div class="boot-progress" role="progressbar" aria-label="Boot progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                  <span id="boot-progress-bar"></span>
+                </div>
+                <button id="boot-skip" class="boot-skip" type="button">
+                  <span data-es="Saltar intro" data-en="Skip intro">Saltar intro</span>
+                </button>
+              </div>
+
+                <div id="terminal" class="terminal" aria-label="Terminal interactiva">
+                <div class="terminal-meta">
+                  <span data-es="Sesion tecnica en vivo" data-en="Live technical session">Sesion tecnica en vivo</span>
+                  <span data-es="Tip: help" data-en="Tip: help">Tip: help</span>
+                </div>
+
+                <div id="terminal-output" class="terminal-output" aria-live="polite"></div>
+
+                <form id="terminal-form" class="terminal-form" autocomplete="off">
+                  <label class="sr-only" for="terminal-input">Terminal command</label>
+                  <span class="terminal-prompt">fran@portfolio:~$</span>
+                  <div class="terminal-input-wrap">
+                    <span id="terminal-measure" class="terminal-measure" aria-hidden="true"></span>
+                    <span id="terminal-ghost" class="terminal-ghost" aria-hidden="true"></span>
+                    <input
+                      id="terminal-input"
+                      type="text"
+                      spellcheck="false"
+                      autocapitalize="off"
+                      data-placeholder-es="Escribi un comando..."
+                      data-placeholder-en="Type a command..."
+                      placeholder="Escribi un comando..."
+                    />
+                  </div>
+                  <span id="terminal-tab-hint" class="terminal-tab-hint" data-es-tab="Tab completar" data-en-tab="Tab complete" data-es-enter="Enter" data-en-enter="Enter" aria-hidden="true">
+                    Tab completar
+                  </span>
+                </form>
+              </div>
+
+            </div>
           </div>
+
+          <div class="monitor-stand" aria-hidden="true"></div>
+          <div class="monitor-foot" aria-hidden="true"></div>
         </div>
       </div>
     </section>
@@ -277,6 +344,10 @@
           <a class="btn btn-primary" href="mailto:franpedrosa04@gmail.com" aria-label="Email Fran Pedrosa">
             <i class="bi bi-envelope"></i>
             <span>franpedrosa04@gmail.com</span>
+          </a>
+          <a class="btn btn-ghost" href="https://wa.me/5492234541211" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Francisco Pedrosa">
+            <i class="bi bi-whatsapp"></i>
+            <span>+54 9 223 454 1211</span>
           </a>
           <a class="btn btn-ghost" href="https://www.linkedin.com/in/fran-pedrosa" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Francisco Pedrosa">
             <i class="bi bi-linkedin"></i>
