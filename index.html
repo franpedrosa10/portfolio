@@ -1,226 +1,290 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@500;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <title>Francisco Pedrosa | Portfolio</title>
+  <meta name="description" content="Portfolio profesional de Francisco Pedrosa, desarrollador de software enfocado en soluciones web eficientes, modernas y centradas en resultados.">
   <link rel="stylesheet" href="styles.css" />
   <script defer src="script.js"></script>
 </head>
 <body class="light">
-  <header>
+  <div class="page-noise" aria-hidden="true"></div>
+
+  <header class="site-header">
     <nav class="navbar">
-  <div class="logo">
-    <a href="#welcome">Francisco Pedrosa</a>
-  </div>
+      <a class="brand" href="#welcome" aria-label="Ir al inicio">Francisco <span>Pedrosa</span></a>
 
-<button id="hamburger" class="hamburger" aria-label="Toggle menu" aria-expanded="false">
-  <span class="bar"></span>
-  <span class="bar"></span>
-  <span class="bar"></span>
-</button>
+      <button id="hamburger" class="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-links">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
 
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" data-es="Acerca de" data-en="About">Acerca de</a></li>
+        <li><a href="#skills" data-es="Habilidades" data-en="Skills">Habilidades</a></li>
+        <li><a href="#projects" data-es="Proyectos" data-en="Projects">Proyectos</a></li>
+        <li><a href="#contact" data-es="Contacto" data-en="Contact">Contacto</a></li>
+      </ul>
 
-  <ul class="nav-links" id="nav-links">
-    <li><a href="#about" data-es="Acerca de" data-en="About">Acerca de</a></li>
-    <li><a href="#skills" data-es="Habilidades" data-en="Skills">Habilidades</a></li>
-    <li><a href="#projects" data-es="Proyectos" data-en="Projects">Proyectos</a></li>
-    <li><a href="#contact" data-es="Contacto" data-en="Contact">Contacto</a></li>
-  </ul>
-
-  <div class="top-controls">
-    <div class="lang-toggle">
-      <button id="lang-es" class="active">ES</button>
-      <button id="lang-en">EN</button>
-    </div>
-    <button class="theme-toggle" id="theme-toggle">🌙</button>
-  </div>
-</nav>
-
+      <div class="top-controls">
+        <div class="lang-toggle" role="group" aria-label="Seleccionar idioma">
+          <button id="lang-es" class="active">ES</button>
+          <button id="lang-en">EN</button>
+        </div>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema">
+          <i class="bi bi-moon-stars-fill" aria-hidden="true"></i>
+        </button>
+      </div>
+    </nav>
   </header>
 
   <main>
-    <section id="welcome" class="hero">
-  <div class="hero-content">
-    <div class="hero-text">
-      <h1 data-es="Hola, soy Francisco Pedrosa" data-en="Hi, I'm Francisco Pedrosa">
-        Hola, soy Francisco Pedrosa
-      </h1>
-      <p data-es="Desarrollador de software orientado a crear soluciones digitales eficientes, mantenibles y centradas en el usuario."
-         data-en="Software developer focused on building efficient, maintainable, and user-centered digital solutions.">
-        Desarrollador de software orientado a crear soluciones digitales eficientes, mantenibles y centradas en el usuario.
-      </p>
-    </div>
-    <div class="hero-image">
-      <img src="foto.jpeg" alt="Foto de Francisco Pedrosa" class="profile-pic" />
-    </div>
-  </div>
-</section>
+    <section id="welcome" class="hero section reveal">
+      <div class="hero-copy">
+        <p class="eyebrow" data-es="DESARROLLADOR FULL STACK" data-en="FULL STACK DEVELOPER">DESARROLLADOR FULL STACK</p>
+        <h1 data-es="Construyo productos digitales claros, robustos y listos para escalar." data-en="I build clear, robust digital products ready to scale.">
+          Construyo productos digitales claros, robustos y listos para escalar.
+        </h1>
+        <p class="hero-lead" data-es="Soy Francisco Pedrosa, desarrollador Full Stack con foco en Frontend con Angular. Construyo aplicaciones web modernas, mantenibles y orientadas a resultados de negocio." data-en="I'm Francisco Pedrosa, a Full Stack developer focused on Frontend with Angular. I build modern, maintainable web applications aligned with business outcomes.">
+          Soy Francisco Pedrosa, desarrollador Full Stack con foco en Frontend con Angular. Construyo aplicaciones web modernas, mantenibles y orientadas a resultados de negocio.
+        </p>
 
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#projects" data-es="Ver proyectos" data-en="View projects">Ver proyectos</a>
+          <a class="btn btn-ghost" href="#contact" data-es="Contactarme" data-en="Contact me">Contactarme</a>
+        </div>
 
-<section id="about">
-  <h2 data-es="Acerca de mí" data-en="About Me">Acerca de mí</h2>
-
-  <p data-es="Soy Técnico Universitario en Programación recientemente egresado, con una sólida formación en desarrollo de aplicaciones web y gestión de bases de datos. Me destaco por mi curiosidad constante, mi rápida capacidad de adaptación y mis ganas de crecer en el mundo IT."
-   data-en="I’m a recently graduated University Technician in Programming with a solid background in web application development and database management. What sets me apart is my curiosity, adaptability, and strong desire to grow in the tech industry.">
-  Soy Técnico Universitario en Programación recientemente egresado, con una sólida formación en desarrollo de aplicaciones web y gestión de bases de datos. Me destaco por mi curiosidad constante, mi rápida capacidad de adaptación y mis ganas de crecer en el mundo IT.
-  </p>
-
-  <p data-es="Actualmente, estoy investigando soluciones de automatización basadas en inteligencia artificial para optimizar procesos y crear experiencias frontend más eficientes e innovadoras."
-     data-en="Currently, I’m exploring AI-based automation solutions to optimize processes and create more efficient and innovative frontend experiences.">
-    Actualmente, estoy investigando soluciones de automatización basadas en inteligencia artificial para optimizar procesos y crear experiencias frontend más eficientes e innovadoras.
-  </p>
-
-  <p data-es="Fuera del código, el rugby ha sido una parte esencial de mi vida desde los 8 años. Haber liderado equipos como capitán me permitió desarrollar habilidades clave como el liderazgo, la toma de decisiones bajo presión y el trabajo colaborativo."
-     data-en="Beyond tech, rugby has been a fundamental part of my life since I was 8 years old. Serving as team captain taught me invaluable lessons in leadership, teamwork, and decision-making under pressure.">
-    Fuera del código, el rugby ha sido una parte esencial de mi vida desde los 8 años. Haber liderado equipos como capitán me permitió desarrollar habilidades clave como el liderazgo, la toma de decisiones bajo presión y el trabajo colaborativo.
-  </p>
-
-  <p data-es="Busco formar parte de un equipo que valore el compromiso, la iniciativa y la mejora continua. Estoy listo para aportar, aprender y crecer en cada línea de código."
-     data-en="I’m eager to join a team that values commitment, initiative, and continuous improvement. I'm ready to contribute, learn, and grow—one line of code at a time.">
-    Busco formar parte de un equipo que valore el compromiso, la iniciativa y la mejora continua. Estoy listo para aportar, aprender y crecer en cada línea de código.
-  </p>
-
-  <div class="cv-buttons">
-    <a href="CV-Francisco-Pedrosa.pdf" download>📄 CV Español</a>
-    <a href="CV-Francisco-Pedrosa-ENG.pdf" download>📄 English CV</a>
-  </div>
-</section>
-
-
-
-    <section id="skills">
-  <h2 data-es="Habilidades" data-en="Skills">Habilidades</h2>
-  <ul>
-    <li><img src="icons/Angular.png" alt="Angular" />Angular</li>
-    <li><img src="icons/typescript.png" alt="TypeScript" />TypeScript</li>
-    <li><img src="icons/node.png" alt="Node.js" />Node.js</li>
-    <li><img src="icons/express.png" alt="Express" />Express</li>
-    <li><img src="icons/mysql.png" alt="MySQL" />MySQL</li>
-    <li><img src="icons/java.png" alt="Java" />Java</li>
-    <li><img src="icons/c.png" alt="C" />C</li>
-    <li><img src="icons/JavaScript.png" alt="JavaScript" />JavaScript</li>
-    <li><img src="icons/html.png" alt="HTML5" />HTML</li>
-    <li><img src="icons/css.png" alt="CSS3" />CSS</li>
-    <li><img src="icons/Bootstrap.png" alt="Bootstrap" />Bootstrap</li>
-    <li><img src="icons/sql.png" alt="SQL" />SQL</li>
-    <li><img src="icons/git.png" alt="Git" />Git</li>
-    <li><img src="icons/github.png" alt="GitHub" />GitHub</li>
-    <li><img src="icons/jira.png" alt="Jira" />Jira</li>
-    <li><img src="icons/trello.png" alt="Trello" />Trello</li>
-    <li><img src="icons/postman.svg" alt="Postman" />Postman</li>
-    <li><img src="icons/react.png" alt="n8n" />React</li>
-  </ul>
-</section>
-
-
-<section id="projects">
-  <h2 data-es="Proyectos" data-en="Projects">Proyectos</h2>
-  <div class="projects-grid">
-    <!-- 1. Home Banking -->
-    <div class="project-card" id="project-homebanking" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="modal-homebanking">
-      <img src="afram.png" alt="Home Banking Project" />
-      <h3 data-es="Home Banking" data-en="Home Banking">Home Banking</h3>
-      <p data-es="Home banking con Angular, Express y MySQL. Transferencias, plazos fijos, dólares y más." 
-         data-en="Home banking with Angular, Express and MySQL. Transfers, fixed deposits, currency exchange and more.">
-         Home banking con Angular, Express y MySQL. Transferencias, plazos fijos, dólares y más.
-      </p>
-    </div>
-
-    <!-- 2. Club Pueyrredon -->
-    <div class="project-card">
-      <img src="prc.png"  
-        data-es="prc.png" 
-        data-en="eng-prc.png" 
-        alt="Club Pueyrredon Project" />
-      <h3 data-es="Pagina Web Club Pueyrredon" data-en="Club Pueyrredon Website">Pagina Web Club Pueyrredon</h3>
-      <p 
-        data-es="Plataforma web del Club Pueyrredón desarrollada con Angular y Node.js. Incluye noticias en tiempo real, resultados minuto a minuto de los partidos, gestión de socios y un panel administrativo." 
-        data-en="Club Pueyrredón web platform built with Angular and Node.js. Includes real-time news, live match updates, member management, and an admin panel.">
-        Plataforma web del Club Pueyrredón desarrollada con Angular y Node.js. Incluye noticias en tiempo real, resultados minuto a minuto de los partidos, gestión de socios y un panel administrativo.
-      </p>
-
-    </div>
-
-    <!-- 3. E-commerce -->
-    <div class="project-card">
-      <img 
-        src="ecommerce.png" 
-        data-es="ecommerce.png" 
-        data-en="eng-ecommerce.png" 
-        alt="Proyecto E‑commerce" 
-      />
-      <h3 data-es="E‑commerce DigiPoint" data-en="DigiPoint E‑commerce">E‑commerce DigiPoint</h3>
-    <p data-es="Plataforma de comercio electrónico desarrollada con Angular, Node.js, Express y MySQL. Incluye autenticación, gestión de productos, dashboard con estadísticas y carrito de compras en tiempo real." 
-      data-en="E‑commerce platform built with Angular, Node.js, Express, and MySQL. Features authentication, product management, analytics dashboard, and real-time shopping cart.">
-      Plataforma de comercio electrónico desarrollada con Angular, Node.js, Express y MySQL. Incluye autenticación, gestión de productos, dashboard con estadísticas y carrito de compras en tiempo real.
-    </p>
-  </div>
-  </div>
-</section>
-
-
-<!-- Modal para Home Banking -->
-<div id="modal-homebanking" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-desc" hidden>
-  <div class="modal-content">
-    <button class="modal-close" aria-label="Close modal">&times;</button>
-    <div class="modal-video">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/iQ0bQvBdtXQ" title="Home Banking Video" frameborder="0" allowfullscreen></iframe>
-    </div>
-    <div class="modal-info">
-      <h3 id="modal-title" data-es="Home Banking" data-en="Home Banking">Home Banking</h3>
-      <p id="modal-desc" data-es="Afram Group es una plataforma de home banking que permite consultar saldos, hacer transferencias, crear plazos fijos, comprar y vender dólares, solicitar préstamos y comunicarse mediante un chatbot o chat directo con el administrador." data-en="Afram Group is a home banking platform that allows users to check balances, make transfers, create fixed-term deposits, buy and sell dollars, apply for loans, and communicate through a chatbot or direct chat with an administrator.">
-        Afram Group es una plataforma de home banking que permite consultar saldos, hacer transferencias, crear plazos fijos, comprar y vender dólares, solicitar préstamos y comunicarse mediante un chatbot o chat directo con el administrador.
-      </p>
-      <div class="github-links">
-        <a href="https://github.com/AgustinaHourcade/AFRAM-Group" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> Frontend</a>
-        <a href="https://github.com/franpedrosa10/API-DB-Afram" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> Backend</a>
-      </div>
-
-      <!-- Colaboradores -->
-      <div class="collaborators">
-        <h4 data-es="Colaboradores" data-en="Collaborators">Colaboradores</h4>
-        <ul>
+        <ul class="hero-highlights" aria-label="Highlights">
           <li>
-            <a href="https://www.linkedin.com/in/agustinahourcade/" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i> Agustina Hourcade</a>
+            <span class="highlight-value">18+</span>
+            <span class="highlight-label" data-es="Tecnologias" data-en="Technologies">Tecnologias</span>
           </li>
           <li>
-            <a href="https://www.linkedin.com/in/agustin-meikle/" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i> Agustin Meikle Echeverria</a>
+            <span class="highlight-value" data-es="Proyectos reales" data-en="Real-world projects">Proyectos reales</span>
+            <span class="highlight-label" data-es="Web + automatizaciones" data-en="Web + automation">Web + automatizaciones</span>
           </li>
           <li>
-            <a href="https://www.linkedin.com/in/mateo-vaccaro-20b4862a3/" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i> Mateo Vaccaro</a>
+            <span class="highlight-value" data-es="100%" data-en="100%">100%</span>
+            <span class="highlight-label" data-es="Compromiso" data-en="Commitment">Compromiso</span>
           </li>
         </ul>
       </div>
+
+      <div class="hero-media">
+        <div class="profile-wrap">
+          <img src="foto.jpeg" alt="Foto de Francisco Pedrosa" class="profile-pic" />
+          <div class="status-pill">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span data-es="Disponible para nuevos desafios" data-en="Available for new opportunities">Disponible para nuevos desafios</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section reveal">
+      <div class="section-head">
+        <p class="section-kicker" data-es="PERFIL" data-en="PROFILE">PERFIL</p>
+        <h2 data-es="Acerca de mi" data-en="About me">Acerca de mi</h2>
+      </div>
+
+      <div class="about-grid">
+        <article class="about-card">
+          <h3 data-es="Foco Full Stack y Frontend con Angular" data-en="Full Stack and Angular Frontend focus">Foco Full Stack y Frontend con Angular</h3>
+          <p data-es="Soy Tecnico Universitario en Programacion, especializado en JavaScript con Angular, Node.js y Express. Desarrollo interfaces solidas y backend desacoplado con APIs REST y SQL." data-en="I am a University Programming Technician specialized in JavaScript with Angular, Node.js, and Express. I build robust interfaces and decoupled backend services with REST APIs and SQL.">
+            Soy Tecnico Universitario en Programacion, especializado en JavaScript con Angular, Node.js y Express. Desarrollo interfaces solidas y backend desacoplado con APIs REST y SQL.
+          </p>
+        </article>
+
+        <article class="about-card">
+          <h3 data-es="Automatizacion como plus de impacto" data-en="Automation as a high-impact add-on">Automatizacion como plus de impacto</h3>
+          <p data-es="Complemento mi perfil Full Stack con automatizaciones en produccion: generacion masiva de VEPs y facturacion con Node.js, integraciones con AFIP/ARCA, correccion de archivos ARCIBA y reportes PDF." data-en="I complement my Full Stack profile with production automation: mass VEP and invoicing workflows in Node.js, AFIP/ARCA integrations, ARCIBA file corrections, and PDF reporting.">
+            Complemento mi perfil Full Stack con automatizaciones en produccion: generacion masiva de VEPs y facturacion con Node.js, integraciones con AFIP/ARCA, correccion de archivos ARCIBA y reportes PDF.
+          </p>
+        </article>
+
+        <article class="about-card">
+          <h3 data-es="Liderazgo y trabajo en equipo" data-en="Leadership and teamwork">Liderazgo y trabajo en equipo</h3>
+          <p data-es="El rugby, y especialmente la experiencia como capitan, fortalecio mi liderazgo, comunicacion y toma de decisiones bajo presion." data-en="Rugby, especially my role as a captain, strengthened my leadership, communication, and decision-making under pressure.">
+            El rugby, y especialmente la experiencia como capitan, fortalecio mi liderazgo, comunicacion y toma de decisiones bajo presion.
+          </p>
+        </article>
+      </div>
+
+      <div class="cv-buttons">
+        <a class="btn btn-primary" href="CV-Francisco-Pedrosa.pdf" download>
+          <i class="bi bi-file-earmark-arrow-down" aria-hidden="true"></i>
+          <span data-es="CV en Espanol" data-en="CV in Spanish">CV en Espanol</span>
+        </a>
+        <a class="btn btn-ghost" href="CV-Francisco-Pedrosa-ENG.pdf" download>
+          <i class="bi bi-file-earmark-arrow-down" aria-hidden="true"></i>
+          <span data-es="CV en Ingles" data-en="CV in English">CV en Ingles</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="skills" class="section reveal">
+      <div class="section-head">
+        <p class="section-kicker" data-es="STACK" data-en="STACK">STACK</p>
+        <h2 data-es="Tecnologias" data-en="Technologies">Tecnologias</h2>
+      </div>
+
+      <p class="section-intro" data-es="Herramientas y tecnologias que uso para crear soluciones completas: frontend, backend, bases de datos y colaboracion." data-en="Tools and technologies I use to build complete solutions: frontend, backend, databases, and collaboration.">
+        Herramientas y tecnologias que uso para crear soluciones completas: frontend, backend, bases de datos y colaboracion.
+      </p>
+
+      <ul class="skills-grid">
+        <li><img src="icons/Angular.png" alt="Angular" /><span>Angular</span></li>
+        <li><img src="icons/typescript.png" alt="TypeScript" /><span>TypeScript</span></li>
+        <li><img src="icons/node.png" alt="Node.js" /><span>Node.js</span></li>
+        <li><img src="icons/express.png" alt="Express" /><span>Express</span></li>
+        <li><img src="icons/mysql.png" alt="MySQL" /><span>MySQL</span></li>
+        <li><img src="icons/java.png" alt="Java" /><span>Java</span></li>
+        <li><img src="icons/c.png" alt="C" /><span>C</span></li>
+        <li><img src="icons/JavaScript.png" alt="JavaScript" /><span>JavaScript</span></li>
+        <li><img src="icons/html.png" alt="HTML" /><span>HTML</span></li>
+        <li><img src="icons/css.png" alt="CSS" /><span>CSS</span></li>
+        <li><img src="icons/Bootstrap.png" alt="Bootstrap" /><span>Bootstrap</span></li>
+        <li><img src="icons/sql.png" alt="SQL" /><span>SQL</span></li>
+        <li><img src="icons/git.png" alt="Git" /><span>Git</span></li>
+        <li><img src="icons/github.png" alt="GitHub" /><span>GitHub</span></li>
+        <li><img src="icons/jira.png" alt="Jira" /><span>Jira</span></li>
+        <li><img src="icons/trello.png" alt="Trello" /><span>Trello</span></li>
+        <li><img src="icons/postman.svg" alt="Postman" /><span>Postman</span></li>
+        <li><img src="icons/react.png" alt="React" /><span>React</span></li>
+      </ul>
+    </section>
+
+    <section id="projects" class="section reveal">
+      <div class="section-head">
+        <p class="section-kicker" data-es="TRABAJOS" data-en="WORK">TRABAJOS</p>
+        <h2 data-es="Proyectos seleccionados" data-en="Selected projects">Proyectos seleccionados</h2>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project-card" id="project-homebanking" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="modal-homebanking">
+          <div class="project-image-wrap">
+            <img src="afram.png" alt="Home Banking Project" />
+          </div>
+          <div class="project-body">
+            <h3 data-es="Home Banking" data-en="Home Banking">Home Banking</h3>
+            <p data-es="Plataforma bancaria construida con Angular, Express y MySQL: transferencias, plazos fijos, prestamos, compra/venta de dolares y asistencia por chat." data-en="Banking platform built with Angular, Express and MySQL: transfers, fixed-term deposits, loans, buy/sell dollars, and in-app chat support.">
+              Plataforma bancaria construida con Angular, Express y MySQL: transferencias, plazos fijos, prestamos, compra/venta de dolares y asistencia por chat.
+            </p>
+            <div class="project-tags">
+              <span>Angular</span>
+              <span>Express</span>
+              <span>MySQL</span>
+            </div>
+            <span class="project-action" data-es="Abrir demo y detalle" data-en="Open demo and details">Abrir demo y detalle</span>
+          </div>
+        </article>
+
+        <a class="project-card project-card-link" href="https://pueyrredonrc.com.ar/home" target="_blank" rel="noopener noreferrer" aria-label="Abrir sitio web Club Pueyrredon">
+          <div class="project-image-wrap">
+            <img src="puey.jpeg" data-es="puey.jpeg" data-en="puey.jpeg" alt="Club Pueyrredon Project" />
+          </div>
+          <div class="project-body">
+            <h3 data-es="Web Club Pueyrredon" data-en="Club Pueyrredon Website">Web Club Pueyrredon</h3>
+            <p data-es="Plataforma institucional en produccion, desarrollada con Angular y Node.js. Incluye noticias en tiempo real, resultados minuto a minuto, gestion de socios y panel administrativo." data-en="Production institutional platform built with Angular and Node.js. Includes real-time news, live match updates, member management, and an admin panel.">
+              Plataforma institucional en produccion, desarrollada con Angular y Node.js. Incluye noticias en tiempo real, resultados minuto a minuto, gestion de socios y panel administrativo.
+            </p>
+            <div class="project-tags">
+              <span>Angular</span>
+              <span>Node.js</span>
+              <span>Admin Panel</span>
+            </div>
+            <span class="project-action" data-es="Ver sitio en vivo" data-en="View live site">Ver sitio en vivo</span>
+          </div>
+        </a>
+
+        <a class="project-card project-card-link" href="https://digipoint.com.ar/home" target="_blank" rel="noopener noreferrer" aria-label="Abrir sitio web DigiPoint">
+          <div class="project-image-wrap">
+            <img src="digi.jpeg" data-es="digi.jpeg" data-en="digi.jpeg" alt="DigiPoint ecommerce project" />
+          </div>
+          <div class="project-body">
+            <h3 data-es="Ecommerce DigiPoint" data-en="DigiPoint Ecommerce">Ecommerce DigiPoint</h3>
+            <p data-es="Ecommerce en produccion desarrollado con Angular, Node.js, Express y MySQL. Incluye autenticacion, gestion de productos, dashboard analitico y carrito en tiempo real." data-en="Production ecommerce platform built with Angular, Node.js, Express, and MySQL. Includes authentication, product management, analytics dashboard, and real-time cart.">
+              Ecommerce en produccion desarrollado con Angular, Node.js, Express y MySQL. Incluye autenticacion, gestion de productos, dashboard analitico y carrito en tiempo real.
+            </p>
+            <div class="project-tags">
+              <span>Angular</span>
+              <span>Node.js</span>
+              <span>MySQL</span>
+            </div>
+            <span class="project-action" data-es="Ver sitio en vivo" data-en="View live site">Ver sitio en vivo</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <div id="modal-homebanking" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-desc" hidden>
+      <div class="modal-content">
+        <button class="modal-close" aria-label="Cerrar modal">
+          <i class="bi bi-x-lg" aria-hidden="true"></i>
+        </button>
+
+        <div class="modal-video">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/iQ0bQvBdtXQ" title="Home Banking Video" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div class="modal-info">
+          <h3 id="modal-title" data-es="Home Banking" data-en="Home Banking">Home Banking</h3>
+          <p id="modal-desc" data-es="Afram Group es una plataforma de home banking donde los usuarios pueden gestionar cuentas, transferir, crear plazos fijos, operar con dolares y acceder a soporte por chatbot o chat directo." data-en="Afram Group is a home banking platform where users can manage accounts, transfer money, create fixed-term deposits, trade dollars, and access support via chatbot or direct chat.">
+            Afram Group es una plataforma de home banking donde los usuarios pueden gestionar cuentas, transferir, crear plazos fijos, operar con dolares y acceder a soporte por chatbot o chat directo.
+          </p>
+
+          <div class="github-links">
+            <a href="https://github.com/AgustinaHourcade/AFRAM-Group" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> Frontend</a>
+            <a href="https://github.com/franpedrosa10/API-DB-Afram" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> Backend</a>
+          </div>
+
+          <div class="collaborators">
+            <h4 data-es="Colaboradores" data-en="Collaborators">Colaboradores</h4>
+            <ul>
+              <li>
+                <a href="https://www.linkedin.com/in/agustinahourcade/" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i> Agustina Hourcade</a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/agustin-meikle/" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i> Agustin Meikle Echeverria</a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/mateo-vaccaro-20b4862a3/" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i> Mateo Vaccaro</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
+    <section id="contact" class="section reveal">
+      <div class="section-head">
+        <p class="section-kicker" data-es="CONTACTO" data-en="CONTACT">CONTACTO</p>
+        <h2 data-es="Construyamos algo que genere impacto" data-en="Let's build something that creates impact">Construyamos algo que genere impacto</h2>
+      </div>
 
+      <div class="contact-card">
+        <p data-es="Estoy buscando oportunidades donde pueda aportar valor desde el dia uno, colaborar con equipos exigentes y seguir creciendo en desarrollo de software." data-en="I'm looking for opportunities where I can add value from day one, collaborate with high-performing teams, and keep growing as a software developer.">
+          Estoy buscando oportunidades donde pueda aportar valor desde el dia uno, colaborar con equipos exigentes y seguir creciendo en desarrollo de software.
+        </p>
 
-<section id="contact">
-  <h2 data-es="Contacto" data-en="Contact">Contacto</h2>
-  <p data-es="Hagamos realidad tu próximo proyecto juntos." data-en="Let's bring your next project to life together.">
-    Hagamos realidad tu próximo proyecto juntos.
-  </p>
-  <p data-es="¿Tienes alguna idea o consulta? Escríbeme, estaré encantado de ayudarte a transformar tus ideas en resultados concretos."
-     data-en="Have any questions or ideas? Reach out—I'm here to help turn your vision into reality.">
-    ¿Tienes alguna idea o consulta? Escríbeme, estaré encantado de ayudarte a transformar tus ideas en resultados concretos.
-  </p>
-  <p>
-    <a href="mailto:franpedrosa04@gmail.com" aria-label="Email Fran Pedrosa">
-      <i class="bi bi-envelope"></i> franpedrosa04@gmail.com
-    </a>
-  </p>
-  <p>
-    <a href="https://www.linkedin.com/in/fran-pedrosa" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Fran Pedrosa">
-      <i class="bi bi-linkedin"></i> Francisco Pedrosa
-    </a>
-  </p>
-</section>
-
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="mailto:franpedrosa04@gmail.com" aria-label="Email Fran Pedrosa">
+            <i class="bi bi-envelope"></i>
+            <span>franpedrosa04@gmail.com</span>
+          </a>
+          <a class="btn btn-ghost" href="https://www.linkedin.com/in/fran-pedrosa" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Francisco Pedrosa">
+            <i class="bi bi-linkedin"></i>
+            <span>LinkedIn</span>
+          </a>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer>
