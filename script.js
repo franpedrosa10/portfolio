@@ -9,11 +9,6 @@
   const hamburger = document.getElementById('hamburger');
   const navLinks = document.getElementById('nav-links');
 
-  const modal = document.getElementById('modal-homebanking');
-  const openBtn = document.getElementById('project-homebanking');
-  const closeBtn = modal?.querySelector('.modal-close');
-  const modalFrame = modal?.querySelector('iframe');
-
   const bootSequence = document.getElementById('boot-sequence');
   const bootSkip = document.getElementById('boot-skip');
   const bootBar = document.getElementById('boot-progress-bar');
@@ -55,6 +50,7 @@
         ],
         impact: [
           'Impacto real en produccion:',
+          '- Sistema de turnos CPMI online.',
           '- Web institucional del Club Pueyrredon online.',
           '- Ecommerce DigiPoint online.',
           '- Automatizaciones fiscales y contables en operacion con Node.js.',
@@ -95,6 +91,7 @@
         ],
         impact: [
           'Real production impact:',
+          '- CPMI appointment system live.',
           '- Club Pueyrredon institutional website live.',
           '- DigiPoint ecommerce live.',
           '- Accounting and tax automation workflows running in production with Node.js.',
@@ -131,26 +128,6 @@
   const closeMenu = () => {
     navLinks?.classList.remove('show');
     hamburger?.setAttribute('aria-expanded', 'false');
-  };
-
-  const openModal = () => {
-    if (!modal) return;
-    modal.hidden = false;
-    body.classList.add('modal-open');
-    closeBtn?.focus();
-  };
-
-  const closeModal = () => {
-    if (!modal) return;
-    modal.hidden = true;
-    body.classList.remove('modal-open');
-
-    if (modalFrame) {
-      const currentSrc = modalFrame.src;
-      modalFrame.src = currentSrc;
-    }
-
-    openBtn?.focus();
   };
 
   const updateTranslatablePlaceholders = (lang) => {
@@ -431,22 +408,6 @@
     }
   });
 
-  openBtn?.addEventListener('click', openModal);
-  openBtn?.addEventListener('keydown', (event) => {
-    if (event.key === 'Enter' || event.key === ' ') {
-      event.preventDefault();
-      openModal();
-    }
-  });
-
-  closeBtn?.addEventListener('click', closeModal);
-
-  modal?.addEventListener('click', (event) => {
-    if (event.target === modal) {
-      closeModal();
-    }
-  });
-
   bootSkip?.addEventListener('click', completeBoot);
 
   terminal?.addEventListener('click', () => {
@@ -495,9 +456,6 @@
         closeMenu();
       }
 
-      if (modal && !modal.hidden) {
-        closeModal();
-      }
     }
   });
 
