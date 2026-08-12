@@ -31,7 +31,7 @@
     es: {
       intro: [
         'Portfolio listo. Bienvenid@ recruiter.',
-        'Foco: Frontend con Angular + backend Node.js/SQL.',
+        'Foco: desarrollo Full Stack con Angular, TypeScript, Node.js y SQL.',
         'Escribi `help` para ver comandos disponibles.'
       ],
       commands: {
@@ -39,9 +39,9 @@
           'Comandos: help, about, stack, impact, projects, contact, cv, clear.'
         ],
         about: [
-          'Soy Francisco Pedrosa, Full Stack con foco en Frontend Angular.',
-          'Construyo interfaces premium, performantes y mantenibles.',
-          'Complemento con backend desacoplado y buenas practicas de arquitectura.'
+          'Soy Francisco Pedrosa, Desarrollador Full Stack con experiencia en aplicaciones productivas.',
+          'Trabajo con Angular y TypeScript en frontend, y Node.js, Express y MySQL en backend.',
+          'También desarrollo automatizaciones contables y fiscales integradas con AFIP/ARCA.'
         ],
         stack: [
           'Frontend: Angular, TypeScript, JavaScript, HTML, CSS, Bootstrap, React.',
@@ -72,7 +72,7 @@
     en: {
       intro: [
         'Portfolio ready. Welcome recruiter.',
-        'Focus: Angular Frontend + Node.js/SQL backend.',
+        'Focus: Full Stack development with Angular, TypeScript, Node.js, and SQL.',
         'Type `help` to see available commands.'
       ],
       commands: {
@@ -80,9 +80,9 @@
           'Commands: help, about, stack, impact, projects, contact, cv, clear.'
         ],
         about: [
-          "I'm Francisco Pedrosa, a Full Stack developer focused on Angular Frontend.",
-          'I build premium, performant and maintainable interfaces.',
-          'I complement this with decoupled backend services and solid architecture practices.'
+          "I'm Francisco Pedrosa, a Full Stack Developer experienced in production applications.",
+          'I work with Angular and TypeScript on the frontend, and Node.js, Express, and MySQL on the backend.',
+          'I also build accounting and tax automations integrated with AFIP/ARCA.'
         ],
         stack: [
           'Frontend: Angular, TypeScript, JavaScript, HTML, CSS, Bootstrap, React.',
