@@ -50,10 +50,10 @@
         ],
         impact: [
           'Impacto real en produccion:',
-          '- Sistema de turnos CPMI online.',
+          '- CPMI: 1.000+ usuarios, 12 medicos y aproximadamente 600 turnos mensuales.',
           '- Web institucional del Club Pueyrredon online.',
           '- Ecommerce DigiPoint online.',
-          '- Automatizaciones fiscales y contables en operacion con Node.js.',
+          '- Automatizacion fiscal para 100+ contribuyentes: de una jornada a menos de una hora.',
           '- Y mas soluciones en desarrollo y mejora continua.'
         ],
         projects: [
@@ -91,10 +91,10 @@
         ],
         impact: [
           'Real production impact:',
-          '- CPMI appointment system live.',
+          '- CPMI: 1,000+ users, 12 physicians, and approximately 600 appointments per month.',
           '- Club Pueyrredon institutional website live.',
           '- DigiPoint ecommerce live.',
-          '- Accounting and tax automation workflows running in production with Node.js.',
+          '- Tax automation for 100+ taxpayers: from a full workday to under one hour.',
           '- And more solutions currently being built and improved.'
         ],
         projects: [
